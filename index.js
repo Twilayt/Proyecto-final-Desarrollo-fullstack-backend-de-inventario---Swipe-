@@ -1,8 +1,12 @@
 require('dotenv').config();
 //
 const dns = require("dns");
-dns.setDefaultResultOrder("ipv4first");
-
+if (dns.setDefaultResultOrder) {
+  dns.setDefaultResultOrder("ipv4first");
+}
+// Log de verificación (para comrpobarlo en render)
+console.log("[BOOT] node:", process.version);
+console.log("[BOOT] dns order:", dns.getDefaultResultOrder ? dns.getDefaultResultOrder() : "not-supported");
 
 //
 const express = require('express');
