@@ -6,3 +6,5 @@ const pool = new Pool({
 });
 
 module.exports = { pool };
+
+console.log("[DB] URL has sslmode?", (process.env.DATABASE_URL || "").includes("sslmode"));
