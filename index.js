@@ -1,5 +1,10 @@
 require('dotenv').config();
+//
+const dns = require("dns");
+dns.setDefaultResultOrder("ipv4first");
 
+
+//
 const express = require('express');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
@@ -10,6 +15,7 @@ const { errorHandler, notFound } = require('./src/middlewares/error.middleware')
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
