@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "20.x"
+  },
   "name": "swipe-backend",
   "version": "1.0.0",
   "description": "Backend Express + Supabase (PostgreSQL) + JWT (roles) + dashboard + weather API",
@@ -31,4 +34,5 @@
     "nodemon": "^3.1.0",
     "supertest": "^7.0.0"
   }
+  
 }
